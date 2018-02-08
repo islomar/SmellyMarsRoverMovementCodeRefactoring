@@ -21,7 +21,7 @@ public class Rover {
         for (int i = 0; i < commandsSequence.length(); ++i) {
             String command = commandsSequence.substring(i, i + 1);
 
-            if (command.equals(ROTATE_LEFT) || command.equals(ROTATE_RIGHT)) {
+            if (command.equals(ROTATE_LEFT)) {
 
                 // Rotate Rover
                 if (direction.equals(NORTH)) {
@@ -49,6 +49,34 @@ public class Rover {
                         direction = NORTH;
                     }
                 }
+            } else if (command.equals(ROTATE_RIGHT)) {
+
+                    // Rotate Rover
+                    if (direction.equals(NORTH)) {
+                        if (command.equals(ROTATE_RIGHT)) {
+                            direction = EAST;
+                        } else {
+                            direction = WEST;
+                        }
+                    } else if (direction.equals(SOUTH)) {
+                        if (command.equals(ROTATE_RIGHT)) {
+                            direction = WEST;
+                        } else {
+                            direction = EAST;
+                        }
+                    } else if (direction.equals(WEST)) {
+                        if (command.equals(ROTATE_RIGHT)) {
+                            direction = NORTH;
+                        } else {
+                            direction = SOUTH;
+                        }
+                    } else {
+                        if (command.equals(ROTATE_RIGHT)) {
+                            direction = SOUTH;
+                        } else {
+                            direction = NORTH;
+                        }
+                    }
             } else {
 
                 // Displace Rover
