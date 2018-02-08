@@ -25,58 +25,26 @@ public class Rover {
 
                 // Rotate Rover
                 if (direction.equals(NORTH)) {
-                    if (command.equals(ROTATE_RIGHT)) {
-                        direction = EAST;
-                    } else {
-                        direction = WEST;
-                    }
+                    direction = WEST;
                 } else if (direction.equals(SOUTH)) {
-                    if (command.equals(ROTATE_RIGHT)) {
-                        direction = WEST;
-                    } else {
-                        direction = EAST;
-                    }
+                    direction = EAST;
                 } else if (direction.equals(WEST)) {
-                    if (command.equals(ROTATE_RIGHT)) {
-                        direction = NORTH;
-                    } else {
-                        direction = SOUTH;
-                    }
+                    direction = SOUTH;
                 } else {
-                    if (command.equals(ROTATE_RIGHT)) {
-                        direction = SOUTH;
-                    } else {
-                        direction = NORTH;
-                    }
+                    direction = NORTH;
                 }
             } else if (command.equals(ROTATE_RIGHT)) {
 
-                    // Rotate Rover
-                    if (direction.equals(NORTH)) {
-                        if (command.equals(ROTATE_RIGHT)) {
-                            direction = EAST;
-                        } else {
-                            direction = WEST;
-                        }
-                    } else if (direction.equals(SOUTH)) {
-                        if (command.equals(ROTATE_RIGHT)) {
-                            direction = WEST;
-                        } else {
-                            direction = EAST;
-                        }
-                    } else if (direction.equals(WEST)) {
-                        if (command.equals(ROTATE_RIGHT)) {
-                            direction = NORTH;
-                        } else {
-                            direction = SOUTH;
-                        }
-                    } else {
-                        if (command.equals(ROTATE_RIGHT)) {
-                            direction = SOUTH;
-                        } else {
-                            direction = NORTH;
-                        }
-                    }
+                // Rotate Rover
+                if (direction.equals(NORTH)) {
+                    direction = EAST;
+                } else if (direction.equals(SOUTH)) {
+                    direction = WEST;
+                } else if (direction.equals(WEST)) {
+                    direction = NORTH;
+                } else {
+                    direction = SOUTH;
+                }
             } else {
 
                 // Displace Rover
